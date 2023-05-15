@@ -1,0 +1,48 @@
+sap.m.MessageBox.confirm("This will RESET the app and all associated data to the initial stage ! Proceed ?", {
+    actions: [sap.m.MessageBox.Action.OK, sap.m.MessageBox.Action.CANCEL],
+    onClose: function(sAction) {
+        if (sAction === "OK") {
+            orderdetails = JSON.parse(JSON.stringify(detailsbackup));
+            orderheaders = JSON.parse(JSON.stringify(headerbackup));
+
+            if (modelmobjMapState.oData.length) {
+                ModelData.Delete(mobjMapState, "id", 1, "EQ");
+                setCachemobjMapState();
+            }
+            mapcenterlat = initlat;
+            mapcenterlong = initlong;
+            mapzoom = 7;
+            if (modelmobjTimer.oData.length) {
+                ModelData.Delete(mobjTimer, "orderid", modelmobjTimer.oData[0].orderid, "EQ");
+                setCachemobjTimer();
+            }
+            stopCount();
+
+            $.each(orderheaders, function(i, orderheader) {
+                ModelData.Delete(mdlDocs, "order", orderheader.order, "EQ");
+                setEnableTimeRec(orderheader.order, false);
+                setStatus(orderheader.order, "Initial");
+            });
+
+            saveOrderHeader();
+            saveOrderDetails();
+            setCachemdlDocs();
+            modeloListDocs.setData([]);
+            modeloListDocs.refresh(true);
+
+            ModelData.Delete(mobjMe, "id", 1, "EQ");
+            setCachemobjMe();
+            $.each(circles, function(i, circle) {
+                circle.setStyle({
+                    fillColor: '#2C3539',
+                    color: '#2C3539'
+                });
+            });
+            showMap();
+            resetMarkers();
+            //var newLatLng = new L.LatLng(initlat, initlong);
+            //memarker.setLatLng(newLatLng);
+            sap.m.MessageToast.show("Demo data has been reset...");
+        }
+    }
+});

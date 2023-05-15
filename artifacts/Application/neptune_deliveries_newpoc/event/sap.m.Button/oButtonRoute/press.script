@@ -1,0 +1,2 @@
+var maplink = getMapLink(modeloPageSESDetails.oData.KNA1_STRAS+"+"+modeloPageSESDetails.oData.KNA1_PSTLZ+"+"+modeloPageSESDetails.oData.KNA1_ORT01);
+window.open(maplink);

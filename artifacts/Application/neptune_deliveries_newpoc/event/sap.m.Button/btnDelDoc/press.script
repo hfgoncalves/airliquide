@@ -1,0 +1,71 @@
+// obj = FieldName of your object with bound model (in the designer)
+// keyField = FieldName of your key in the model
+// keyValue = FieldValue of your key in the model
+// operator = operator for comparison, see full list below
+
+// Using single key field
+// ModelData.Delete(mdlDocs, "ts", txtTS.getText(), "EQ");
+// debugger;
+
+modeloListDocs.setData();
+
+ModelData.Delete(
+    mdlDocs,
+    ["ts", "order"],
+    [txtTS.getText(), modeloPageSESDetails.oData.VBELN],
+    ["EQ", "EQ"]
+);
+setCachemdlDocs();
+
+ModelData.Delete(
+    mdlDocsGetFromApi,
+    ["ts", "order"],
+    [txtTS.getText(), modeloPageSESDetails.oData.VBELN],
+    ["EQ", "EQ"]
+);
+setCachemdlDocsGetFromApi();
+
+var alldocs = JSON.parse(JSON.stringify(modelmdlDocs.oData));
+if (alldocs.length > 0) {
+    var doclist = alldocs.filter((doclist) => doclist.order === modeloPageSESDetails.oData.VBELN);
+
+    modeloListDocs.setData(doclist);
+    modeloListDocs.refresh(true);
+
+    tabDocs.setText("Documents(" + doclist.length + ")");
+} else {
+    tabDocs.setText("Documents(0)");
+}
+
+sap.m.MessageToast.show("Image deleted !");
+
+//Add Cached API Documents
+var alldocsFromApi = JSON.parse(JSON.stringify(modelmdlDocsGetFromApi.oData));
+var doclistFromApi = alldocsFromApi.filter(
+    (doclistFromApi) => doclistFromApi.order === modeloPageSESDetails.oData.VBELN
+);
+
+if (doclistFromApi.length) {
+    //Find Existing Displayed Documents
+    var findoListDocs = ModelData.Find(oListDocs, "order", data.VBELN, "EQ");
+
+    var checkIfDocExists;
+
+    if (findoListDocs.length > 0) {
+        for (let a = 0; a < doclistFromApi.length; a++) {
+            checkIfDocExists = ModelData.Find(findoListDocs, "name", doclistFromApi[a].name, "EQ");
+            if (checkIfDocExists.length <= 0) {
+                ModelData.Add(oListDocs, doclistFromApi[a]);
+            }
+        }
+    } else {
+        for (let i = 0; i < doclistFromApi.length; i++) {
+            ModelData.Add(oListDocs, doclistFromApi[i]);
+        }
+    }
+
+    modeloListDocs.refresh(true);
+    tabDocs.setText("Documents(" + modeloListDocs.oData.length + ")");
+}
+
+oApp.back();

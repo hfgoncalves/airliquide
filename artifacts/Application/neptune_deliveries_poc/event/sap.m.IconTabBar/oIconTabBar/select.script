@@ -1,0 +1,36 @@
+if (oEvent.getParameters().key === 'tabMap') {
+    var sesdata = JSON.parse(JSON.stringify(modeloPageSESDetails.oData));
+    if (addrmap) {
+        addrmap.remove();
+    }
+    addrmap = L.map(oHBox.getDomRef(), {
+        zoomControl: false
+    }).setView([sesdata.lat, sesdata.long], 13);
+    addrmap.dragging.disable();
+    myTileLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', tilesDb, {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
+        //subdomains: 'abc',
+        minZoom: 13,
+        maxZoom: 13,
+        //crossOrigin: true
+    });
+    myTileLayer.addTo(addrmap);
+    addressMarker = L.marker([sesdata.lat, sesdata.long]);
+    var icon;
+    map.closePopup();
+    var maplink = getMapLink(sesdata.lat, sesdata.long);
+    switch (sesdata.status) {
+        case 'Initial':
+            icon = iconRed;
+            break;
+        case 'In Progress':
+            icon = iconOrange;
+            break;
+        case 'Completed':
+            icon = iconGreen;
+            break;
+    }
+    addressMarker.addTo(addrmap);
+    addressMarker.setIcon(icon);
+    addressMarker.bindPopup("<b><a href='" + maplink + "' target=_system>" + sesdata.address + "</a></b>").openPopup();
+}

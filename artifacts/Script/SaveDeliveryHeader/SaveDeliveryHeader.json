@@ -1,0 +1,26 @@
+{
+	"id": "90b30a99-79ee-ed11-9f73-000d3ab7b01b",
+	"createdAt": "2023-05-09T14:55:55.470Z",
+	"createdBy": "admin",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [
+		{
+			"id": "D96F03FE-94ED-ED11-9F73-000D3A67AEF5",
+			"name": "airliquidesaveddeliveries_header",
+			"contextname": "airliquidesaveddeliveries_header"
+		}
+	],
+	"apis": [],
+	"name": "SaveDeliveryHeader",
+	"ver": "23.5.9.1553",
+	"description": null,
+	"content": "file:///content.js",
+	"useAsGlobalScript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": false,
+	"isTypescript": false,
+	"language": "javascript",
+	"jsscriptGroup": null,
+	"package": "cea414cd-24eb-ed11-9f73-000d3a67aef5"
+}

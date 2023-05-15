@@ -1,0 +1,3 @@
+if (modelmdlDocs.oData.length){
+    docs = JSON.parse(JSON.stringify(modelmdlDocs.oData));
+}

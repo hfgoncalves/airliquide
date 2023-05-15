@@ -1,0 +1,66 @@
+{
+	"id": "d96f03fe-94ed-ed11-9f73-000d3a67aef5",
+	"createdAt": "2023-05-08T11:39:32.016Z",
+	"createdBy": "admin",
+	"fields": [
+		{
+			"id": "07cb5c8a-a421-45dd-a6b9-89d52f0bf16b",
+			"fieldName": "VBELN",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "2bee38d3-2dcf-4f34-b3e0-a8e59a0d723e",
+			"fieldName": "STATUS",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "90e90aaa-2939-4d89-8b57-2fd1a5fcb619",
+			"fieldName": "ENABLED",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "1bac1300-8fc2-44fc-f552-1f49a2d3ae8b",
+			"fieldName": "GEOFENCERADIUS",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "ea98edc9-e282-4c8f-a598-cf2ec2015624",
+			"fieldName": "GEOFENCEEXITED",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "b780bb92-677e-4b8e-d68e-22ebe6a97bd8",
+			"fieldName": "SIGNATURE",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "a9971c1d-451c-4ad5-a0d7-fd1c27f3d3a4",
+			"fieldName": "DOCUMENTS",
+			"fieldType": "json",
+			"isUnique": false,
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "airliquidesaveddeliveries_header",
+	"description": null,
+	"ver": "23.5.10.1123",
+	"enableAudit": true,
+	"includeDataInPackage": true,
+	"package": "cea414cd-24eb-ed11-9f73-000d3a67aef5",
+	"rolesRead": [],
+	"rolesWrite": []
+}

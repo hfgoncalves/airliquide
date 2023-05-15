@@ -1,0 +1,66 @@
+{
+	"id": "bff2952e-57ee-ed11-9f73-000d3ab7b01b",
+	"createdAt": "2023-05-09T10:49:35.430Z",
+	"createdBy": "admin",
+	"fields": [
+		{
+			"id": "d5ea6948-1628-48aa-8693-437e61517a9a",
+			"fieldName": "VBELN",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "10e4d653-8b51-4779-dc7e-3a9767492e0d",
+			"fieldName": "POSNR",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "f2840820-301a-49f3-d42b-2b3d1c5138da",
+			"fieldName": "MATNR",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "ca3c393d-7599-4d0e-d1ed-7a16e0886541",
+			"fieldName": "MAKTX",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "e22ee550-d317-4c88-c1be-2279791192e5",
+			"fieldName": "TIMERECORDED",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "82cef505-d8f6-437e-aca3-684fa3acd41a",
+			"fieldName": "STATUS",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "8ae592ad-ec07-4c9d-b59b-945a098d1daf",
+			"fieldName": "ENABLED",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "airliquidesaveddeliveries_detail",
+	"description": null,
+	"ver": "23.5.9.1648",
+	"enableAudit": true,
+	"includeDataInPackage": true,
+	"package": "cea414cd-24eb-ed11-9f73-000d3a67aef5",
+	"rolesRead": [],
+	"rolesWrite": []
+}

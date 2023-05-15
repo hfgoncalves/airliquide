@@ -1,0 +1,40 @@
+var data = JSON.parse(JSON.stringify(modeloPageTimer.oData));
+if (checkActiveTasks(data.order)) {
+    sap.m.MessageToast.show("There is already a task in progress ! Please complete the task before starting another one !");
+} else {
+
+    lblMsg.setText("");
+    var startTs = Math.floor(Date.now() / 1000);
+    // var startTs = 1570605421;
+
+
+    if (modelmobjTimer.oData.length) {
+        var newStartTS = startTs - (modelmobjTimer.oData[0].end - modelmobjTimer.oData[0].start);
+        var startTime = {
+            'orderid': data.order,
+            'start': newStartTS,
+            'end': 0
+        };
+        ModelData.Update(mobjTimer, "orderid", data.order, startTime, "EQ");
+        setCachemobjTimer();
+    } else {
+        var startTime = {
+            'orderid': data.order,
+            'start': startTs,
+            'end': 0
+        };
+        ModelData.Add(mobjTimer, startTime);
+        setCachemobjTimer();
+    }
+
+
+    btnStop.setEnabled(true);
+    startCount();
+    btnStart.setEnabled(false);
+    setStatus(data.order, "In Progress");
+    redrawMarkers();
+    modeloPageTimer.refresh(true);
+    setGeofenceExited(data.order, false);
+    btnReset.setEnabled(false);
+    btnSaveItem.setEnabled(false);
+}

@@ -1,0 +1,3 @@
+oApp.back();
+showMap();
+map.setView(new L.LatLng(mapcenterlat, mapcenterlong), mapzoom);

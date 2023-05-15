@@ -1,0 +1,2 @@
+//Quagga.stop();
+DialogBarcodeScanner.close();

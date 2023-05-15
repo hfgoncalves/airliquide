@@ -1,0 +1,2 @@
+//map.setView(new L.LatLng(initlat, initlong), 7);
+centerMap();

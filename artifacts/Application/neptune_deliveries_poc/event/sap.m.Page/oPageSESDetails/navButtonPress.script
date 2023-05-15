@@ -1,0 +1,7 @@
+oApp.back();
+oIconTabBar.setSelectedKey("tabItems");
+modeloListSES.refresh(true);
+if (oApp.getCurrentPage().getId().includes("oPageStart")) {
+                        showMap();
+                        map.setView(new L.LatLng(mapcenterlat, mapcenterlong), mapzoom);
+                    } 

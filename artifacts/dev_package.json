@@ -1,0 +1,103 @@
+{
+	"id": "cea414cd-24eb-ed11-9f73-000d3a67aef5",
+	"createdAt": "2023-05-05T09:11:22.053Z",
+	"createdBy": "admin",
+	"git": {
+		"remote": "https://github.com/hfgoncalves/airliquide.git"
+	},
+	"name": "neptunesoftware-poc-content",
+	"description": null,
+	"ver": "23.5.15.856",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "b96c7013-96ed-ed11-9f73-000d3a67aef5",
+			"application": "neptune_deliveries_newpoc",
+			"title": "Neptune Deliveries Application",
+			"description": ""
+		},
+		{
+			"id": "899800d7-81ed-ed11-9f73-000d3a67aef5",
+			"application": "neptune_deliveries_poc",
+			"title": "Neptune Deliveries Application",
+			"description": ""
+		}
+	],
+	"api": [],
+	"odataSource": [],
+	"odataMock": [],
+	"dictionary": [
+		{
+			"id": "d96f03fe-94ed-ed11-9f73-000d3a67aef5",
+			"name": "airliquidesaveddeliveries_header",
+			"description": null
+		},
+		{
+			"id": "bff2952e-57ee-ed11-9f73-000d3ab7b01b",
+			"name": "airliquidesaveddeliveries_detail",
+			"description": null
+		}
+	],
+	"jsclass": [
+		{
+			"id": "94b30a99-79ee-ed11-9f73-000d3ab7b01b",
+			"name": "SaveDeliveryDetail",
+			"description": null
+		},
+		{
+			"id": "90b30a99-79ee-ed11-9f73-000d3ab7b01b",
+			"name": "SaveDeliveryHeader",
+			"description": null
+		}
+	],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [
+		{
+			"id": "80158e8d-94ed-ed11-9f73-000d3a67aef5",
+			"name": "SAP Daniel Auth",
+			"description": null
+		}
+	],
+	"api_group": [],
+	"tile": [
+		{
+			"id": "ea6d0ba6-95ed-ed11-9f73-000d3a67aef5",
+			"description": null,
+			"name": "airLiquideDeliveryTile"
+		}
+	],
+	"category": [
+		{
+			"id": "92f8ebab-97ed-ed11-9f73-000d3a67aef5",
+			"description": null,
+			"name": "TLairLiquidePOC"
+		}
+	],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"department": [],
+	"script_scheduler": [],
+	"wf_definition": [],
+	"connector": [],
+	"events": [],
+	"media_library": [
+		{
+			"id": "DCB406AF-24EB-ED11-9F73-000D3A67AEF5",
+			"updatedAt": "2023-05-05T09:11:40.186Z",
+			"name": "LaunchpadAssets",
+			"parent": null,
+			"package": "CEA414CD-24EB-ED11-9F73-000D3A67AEF5"
+		}
+	],
+	"code_snippets": [],
+	"wf_determination": [],
+	"wf_taskaction": []
+}

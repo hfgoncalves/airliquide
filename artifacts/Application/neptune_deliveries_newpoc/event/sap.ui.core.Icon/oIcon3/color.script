@@ -1,0 +1,14 @@
+if (typeof STATUS === "undefined" || STATUS === null || STATUS === "") {
+    return;
+}
+var formattedText = STATUS;
+
+if (formattedText === "Initial") {
+    formattedText = "red";
+} else if (formattedText === "In Progress") {
+    formattedText = "yellow";
+} else {
+    formattedText = "green";
+}
+
+return formattedText;

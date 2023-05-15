@@ -1,0 +1,15 @@
+// obj = FieldName of your object with bound model (in the designer)
+// keyField = FieldName of your key in the model
+// keyValue = FieldValue of your key in the model
+// operator = operator for comparison, see full list below
+
+// Using single key field
+ModelData.Delete(mdlDocs, "ts", txtTS.getText(), "EQ");
+setCachemdlDocs();
+oApp.back();
+var alldocs = JSON.parse(JSON.stringify(modelmdlDocs.oData));
+var doclist = alldocs.filter(doclist => doclist.order === txtOrderID.getText());
+modeloListDocs.setData(doclist);
+modeloListDocs.refresh(true);
+tabDocs.setText("Documents(" + doclist.length + ")");
+sap.m.MessageToast.show("Image deleted !");

@@ -1,0 +1,26 @@
+lblMsg.setText("");
+var data = JSON.parse(JSON.stringify(modeloPageTimer.oData));
+setStatusItem(data.VBELN, "Completed");
+if (modelmobjTimer.oData.length) {
+    ModelData.Delete(mobjTimer, "orderid", modelmobjTimer.oData[0].orderid, "EQ");
+    setCachemobjTimer();
+}
+
+var timeTaken = lblHH.getText() + ":" + lblMM.getText() + ":" + lblSS.getText();
+saveTime(data.VBELN, timeTaken);
+
+btnStart.setEnabled(false);
+btnStop.setEnabled(false);
+btnReset.setEnabled(false);
+btnSaveItem.setEnabled(false);
+modeloPageTimer.refresh(true);
+// redrawMarkers();
+// setGeofenceExited(data.order, false);
+sap.m.MessageToast.show("Item set as delivered !");
+
+stopCount();
+modeloPageSESDetails.refresh(true);
+// modeloListSESItems.refresh(true);
+modeloListSESItems_SAP.refresh(true);
+lblMsg.setText("");
+oApp.back();

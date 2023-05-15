@@ -1,0 +1,38 @@
+var context = oEvent.oSource.getBindingContext();
+var data = context.getObject();
+modeloPageSESDetails.setData(data);
+modeloPageSESDetails.refresh(true);
+
+var singleorder = orderdetails.filter(singleorder => singleorder.order === data.order);
+
+modeloListSESItems.setData(singleorder);
+modeloListSESItems.refresh(true);
+
+oApp.to(oPageSESDetails);
+setMsgs(objStatMsgDet, singleorder[0].enabled);
+if (singleorder[0].enabled) {
+    btnAdd.setEnabled(true);
+    btnDelDoc.setEnabled(true);
+} else {
+    btnAdd.setEnabled(false);
+    btnDelDoc.setEnabled(false);
+}
+
+if (data.status === "Completed") {
+    btnSaveHeader.setEnabled(false);
+    tabSign.setVisible(true);
+    btnAdd.setEnabled(false);
+    btnDelDoc.setEnabled(false);
+} else {
+    btnSaveHeader.setEnabled(true);
+    tabSign.setVisible(false);
+}
+if (modelmdlDocs.oData.length) {
+    var alldocs = JSON.parse(JSON.stringify(modelmdlDocs.oData));
+    var doclist = alldocs.filter(doclist => doclist.order === data.order);
+    modeloListDocs.setData(doclist);
+    modeloListDocs.refresh(true);
+    tabDocs.setText("Documents(" + doclist.length + ")");
+} else {
+    tabDocs.setText("Documents(0)");
+}

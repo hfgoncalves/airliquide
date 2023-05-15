@@ -1,0 +1,17 @@
+//Get Docs API Response
+var responseDocsStruc = {};
+var responseDocsArray = [];
+
+if (xhr.responseJSON[0].DOCUMENTS.length > 0) {
+    var responseDocs = xhr.responseJSON;
+
+    for (let a = 0; a < responseDocs.length; a++) {
+        for (let b = 0; b < responseDocs[a].DOCUMENTS.length; b++) {
+            responseDocsStruc = responseDocs[a].DOCUMENTS[b];
+            responseDocsArray.push(responseDocsStruc);
+        }
+    }
+
+    modelmdlDocsGetFromApi.setData(responseDocsArray);
+    setCachemdlDocsGetFromApi();
+}

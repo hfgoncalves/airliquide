@@ -1,0 +1,6 @@
+var context = oEvent.oSource.getBindingContext();
+var data = context.getObject();
+// debugger;
+var address = data.KNA1_STRAS+"+"+data.KNA1_PSTLZ+"+"+data.KNA1_ORT01;
+var maplink = getMapLink(address);
+window.open(maplink);

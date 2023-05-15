@@ -1,0 +1,3 @@
+if (modelmdlOrderDetails.oData.length){
+    orderdetails = JSON.parse(JSON.stringify(modelmdlOrderDetails.oData));
+}

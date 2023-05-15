@@ -1,0 +1,19 @@
+if (signaturePad.isEmpty()) {
+    sap.m.MessageToast.show("Please sign before saving !");
+} else {
+    // var data = JSON.parse(JSON.stringify(modeloPageSESDetails.oData));
+    var data = modeloPageSESDetails.oData;
+    // setStatusHeader(data.order, "Completed");
+    setStatusHeader(data.VBELN, "Completed");
+    // saveSignature(data.order, signaturePad.toDataURL());
+    saveSignature(data.VBELN, signaturePad.toDataURL());
+    tabSign.setVisible(true);
+    modeloPageSESDetails.refresh(true);
+    btnAdd.setEnabled(false);
+    btnDelDoc.setEnabled(false);
+    btnSaveHeader.setEnabled(false);
+    oDialogSign.close();
+    sap.m.MessageToast.show("Order saved !");
+    // redrawMarkers();
+    getDeliveryHeader(modeloPageSESDetails.oData);
+}

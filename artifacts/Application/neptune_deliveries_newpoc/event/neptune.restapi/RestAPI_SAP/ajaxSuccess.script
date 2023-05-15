@@ -1,0 +1,40 @@
+const { GT_LIPS, GT_LIKP } = xhr.responseJSON.result;
+
+var headerCacheData, detailCacheData;
+
+headerCacheData = modelsap_LIKP.oData;
+
+if (headerCacheData.length > 0) {
+    //If there is existing data in the cached tables, we only add new header / detail from sap that are not present in the cached data
+    getCachedData(headerCacheData, GT_LIKP, GT_LIPS);
+} else {
+    modelsap_LIPS.setData(GT_LIPS);
+    modelsap_LIKP.setData(GT_LIKP);
+
+    modeloListSES_SAP.setData(GT_LIKP);
+}
+
+modeloListSES_SAP.refresh(true);
+
+setCachesap_LIPS();
+setCachesap_LIKP();
+
+//----------------------------------------------------
+
+//Get Header Documents
+// var options = {
+//     parameters: {
+//         where: "", // Optional
+//         select: "", // Optional
+//         take: "", // Optional
+//         skip: "", // Optional
+//         order: "", // Optional
+//     },
+// };
+
+// apiRestAPI_GetDocs(options);
+
+//Get Stored Header / Detail in Open Edition
+setTimeout(function () {
+    getDataOpenEdition();
+}, 500);

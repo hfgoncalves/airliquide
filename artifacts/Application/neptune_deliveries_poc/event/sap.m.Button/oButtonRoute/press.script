@@ -1,0 +1,2 @@
+var maplink = getMapLink(modeloPageSESDetails.oData.lat, modeloPageSESDetails.oData.long);
+window.open(maplink);

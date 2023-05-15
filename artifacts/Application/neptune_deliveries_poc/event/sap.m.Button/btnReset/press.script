@@ -1,0 +1,18 @@
+lblMsg.setText("");
+lblHH.setText("00");
+lblMM.setText("00");
+lblSS.setText("00");
+btnReset.setEnabled(false);
+btnSaveItem.setEnabled(false);
+var data = JSON.parse(JSON.stringify(modeloPageTimer.oData));
+if (data.enabled) {
+    btnStart.setEnabled(true);
+} else {
+    btnStart.setEnabled(false);
+}
+ModelData.Delete(mobjTimer, "orderid", modelmobjTimer.oData[0].orderid, "EQ");
+setCachemobjTimer();
+setStatus(data.order, "Initial");
+modeloPageTimer.refresh(true);
+redrawMarkers();
+setGeofenceExited(data.order, false);

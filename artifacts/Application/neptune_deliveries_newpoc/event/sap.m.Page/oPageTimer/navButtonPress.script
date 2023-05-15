@@ -1,0 +1,6 @@
+stopCount();
+modeloPageSESDetails.refresh(true);
+// modeloListSESItems.refresh(true);
+modeloListSESItems_SAP.refresh(true);
+lblMsg.setText("");
+oApp.back();

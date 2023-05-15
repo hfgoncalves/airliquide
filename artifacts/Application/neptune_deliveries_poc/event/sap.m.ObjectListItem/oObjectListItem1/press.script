@@ -1,0 +1,21 @@
+var context = oEvent.oSource.getBindingContext();
+
+var data = context.getObject();
+
+modeloPageTimer.setData(data);
+modeloPageTimer.refresh();
+
+oApp.to(oPageTimer);
+
+setMsgs(objStatMsgTimer, data.enabled);
+
+lblHH.setText("00");
+lblMM.setText("00");
+lblSS.setText("00");
+
+btnReset.setEnabled(false);
+btnSaveItem.setEnabled(false);
+btnStop.setEnabled(false);
+btnStart.setEnabled(data.enabled);
+
+initTimer(data);

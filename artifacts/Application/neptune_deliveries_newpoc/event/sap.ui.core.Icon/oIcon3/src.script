@@ -1,0 +1,12 @@
+if (typeof ENABLED === "undefined" || ENABLED === null || ENABLED === "") {
+    return;
+}
+var formattedText = ENABLED;
+
+if (formattedText === true) {
+    formattedText = "sap-icon://fa-solid/box-open";
+} else {
+    formattedText = "sap-icon://fa-solid/box";
+}
+
+return formattedText;

@@ -1,0 +1,9 @@
+oApp.to(oPageImage);
+var context = oEvent.oSource.getBindingContext();
+var data = context.getObject();
+//console.log(data)
+imgPic.setSrc(data.img);
+txtDocName.setText(data.name);
+txtTS.setText(data.ts);
+txtOrderID.setText(data.order);
+oPanel.setExpanded(true);

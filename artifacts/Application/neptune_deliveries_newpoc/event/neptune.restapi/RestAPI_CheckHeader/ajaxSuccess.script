@@ -1,0 +1,14 @@
+var headerData, detailData;
+
+headerData = ModelData.Find(sap_LIKP, "VBELN", modeloPageSESDetails.oData.VBELN, "EQ");
+detailData = ModelData.Find(sap_LIPS, "VBELN", modeloPageSESDetails.oData.VBELN, "EQ");
+
+if (xhr.responseJSON.length > 0) {
+    //There's already an existing entry and we update the existing entries in the tables
+    updateDeliveryHeader(headerData[0]);
+    updateDeliveryDetail(detailData);
+} else {
+    //Insert a new entry in the tables
+    insertDeliveryHeader(headerData[0]);
+    insertDeliveryDetail(detailData);
+}

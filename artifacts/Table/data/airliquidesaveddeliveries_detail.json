@@ -1,0 +1,72 @@
+[
+	{
+		"id": "fde3ca36-a039-4546-8ee6-6cb4a3aaa93d",
+		"createdAt": "1683880567310",
+		"updatedAt": "1683880567310",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017556",
+		"POSNR": "10",
+		"MATNR": "DPC1003",
+		"MAKTX": "硬盘180G/SCSI-2",
+		"TIMERECORDED": "00:00:04",
+		"STATUS": "Completed",
+		"ENABLED": "false"
+	},
+	{
+		"id": "dd9765cf-02b6-4981-8a1b-e9f7cb7cd757",
+		"createdAt": "1683913906954",
+		"updatedAt": "1683913906954",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017555",
+		"POSNR": "10",
+		"MATNR": "CS-100",
+		"MAKTX": "CS-100 Finished Goods",
+		"TIMERECORDED": "00:00:05",
+		"STATUS": "Completed",
+		"ENABLED": "false"
+	},
+	{
+		"id": "605bd60d-2deb-4c3d-a457-811b4e827dc0",
+		"createdAt": "1683914295191",
+		"updatedAt": "1683914295191",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017554",
+		"POSNR": "10",
+		"MATNR": "100-100",
+		"MAKTX": "外壳",
+		"TIMERECORDED": "00:00:04",
+		"STATUS": "Completed",
+		"ENABLED": "false"
+	},
+	{
+		"id": "5cfd4168-e9ef-4941-be2e-194496a6fbb7",
+		"createdAt": "1683913906954",
+		"updatedAt": "1683913906954",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017555",
+		"POSNR": "20",
+		"MATNR": "CS-200",
+		"MAKTX": "CS-200 Finished Goods",
+		"TIMERECORDED": "00:00:05",
+		"STATUS": "Completed",
+		"ENABLED": "false"
+	},
+	{
+		"id": "234a6b46-a3d2-4d01-b832-cc9d568a345f",
+		"createdAt": "1683711545688",
+		"updatedAt": "1683807178196",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017557",
+		"POSNR": "10",
+		"MATNR": "000000000000001700",
+		"MAKTX": "REA Printer with remote control",
+		"TIMERECORDED": "00:00:02",
+		"STATUS": "Completed",
+		"ENABLED": "true"
+	}
+]

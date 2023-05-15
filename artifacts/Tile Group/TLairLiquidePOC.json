@@ -1,0 +1,81 @@
+{
+	"id": "92f8ebab-97ed-ed11-9f73-000d3a67aef5",
+	"createdAt": "2023-05-08T11:58:48.910Z",
+	"createdBy": "admin",
+	"translation": [
+		{
+			"language": "FR",
+			"title": "Vente et de distribution",
+			"subTitle": "Afficher, modifier les livraisons provenant de SAP"
+		}
+	],
+	"tilesOrder": [
+		"ea6d0ba6-95ed-ed11-9f73-000d3a67aef5"
+	],
+	"tilegroupsOrder": [],
+	"configMessage": {
+		"type": "None"
+	},
+	"title": "Sales and Distribution",
+	"subTitle": "View, Edit Deliveries coming from SAP",
+	"description": null,
+	"titleAlignment": null,
+	"enableFullScreen": false,
+	"hideHeader": false,
+	"backgroundType": "cards",
+	"backgroundColor": "",
+	"backgroundShade": null,
+	"type": null,
+	"image": null,
+	"icon": null,
+	"sort": null,
+	"inclFav": false,
+	"styleClass": null,
+	"enableScroll": false,
+	"enableShadeCalc": false,
+	"numTiles": null,
+	"enableMessage": false,
+	"ver": "23.5.14.1944",
+	"headColor": null,
+	"headTxtClr": null,
+	"subheadTxtClr": null,
+	"headBorderClr": null,
+	"headBorderWidth": null,
+	"imageTablet": null,
+	"imageMobile": null,
+	"imageCover": false,
+	"imageTabletCover": false,
+	"imageMobileCover": false,
+	"imageMobileHeight": null,
+	"imageTabletHeight": null,
+	"imageHeight": null,
+	"name": "TLairLiquidePOC",
+	"cardContentWidth": null,
+	"cardContentAlign": null,
+	"cardPerRow": "Many",
+	"cardStyle": null,
+	"cardHeightFit": false,
+	"imagePlacement": null,
+	"imageRepeat": null,
+	"imageSize": null,
+	"imageTabletPlacement": null,
+	"imageTabletRepeat": null,
+	"imageTabletSize": null,
+	"imageMobilePlacement": null,
+	"imageMobileRepeat": null,
+	"imageMobileSize": null,
+	"hideFromMenu": false,
+	"roleTag": null,
+	"cockpitTileGroup": false,
+	"package": "cea414cd-24eb-ed11-9f73-000d3a67aef5",
+	"roles": [],
+	"tiles": [
+		{
+			"id": "ea6d0ba6-95ed-ed11-9f73-000d3a67aef5",
+			"name": "airLiquideDeliveryTile",
+			"title": "Delivery Management",
+			"ver": "23.5.14.1945"
+		}
+	],
+	"tilegroups": []
+}

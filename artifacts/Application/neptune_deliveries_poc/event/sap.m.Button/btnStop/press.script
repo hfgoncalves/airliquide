@@ -1,0 +1,20 @@
+lblMsg.setText("");
+var stopTs = Math.floor(Date.now() / 1000);
+var data = JSON.parse(JSON.stringify(modelmobjTimer.oData[0]));
+data.end = stopTs;
+ModelData.Update(mobjTimer, "orderid", data.orderid, data, "EQ");
+setCachemobjTimer();
+
+stopCount();
+
+btnSaveItem.setEnabled(true);
+btnStop.setEnabled(false);
+btnReset.setEnabled(true);
+
+var orderdata = JSON.parse(JSON.stringify(modeloPageTimer.oData));
+
+if(orderdata.enabled){
+    btnStart.setEnabled(true);
+}else{
+    btnStart.setEnabled(false);
+}

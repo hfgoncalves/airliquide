@@ -1,0 +1,27 @@
+{
+	"id": "80158e8d-94ed-ed11-9f73-000d3a67aef5",
+	"createdAt": "2023-05-08T11:36:25.260Z",
+	"createdBy": "admin",
+	"headers": [],
+	"details": {
+		"subject": {},
+		"headers": [],
+		"username": "DANIEL",
+		"password": "d8aac42264f06dbc5d700a13d93d9f97",
+		"secret": ""
+	},
+	"azureRelayDetails": {
+		"ns": "",
+		"path": "",
+		"keyRule": "",
+		"key": "",
+		"apKey": ""
+	},
+	"name": "SAP Daniel Auth",
+	"description": null,
+	"type": "basic",
+	"useCloudConnector": false,
+	"cloudConnectorType": null,
+	"ver": "23.5.8.1136",
+	"package": "cea414cd-24eb-ed11-9f73-000d3a67aef5"
+}

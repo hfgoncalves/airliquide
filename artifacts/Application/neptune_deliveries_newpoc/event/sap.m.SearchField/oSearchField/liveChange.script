@@ -1,0 +1,7 @@
+// var binding = oListSES.getBinding("items");
+// var filter = new sap.ui.model.Filter("order", "Contains", this.getValue());
+// binding.filter([filter]);
+
+var binding = oListSES_SAP.getBinding("items");
+var filter = new sap.ui.model.Filter("VBELN", "Contains", this.getValue());
+binding.filter([filter]);

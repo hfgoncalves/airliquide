@@ -1,0 +1,5 @@
+stopCount();
+modeloPageSESDetails.refresh(true);
+modeloListSESItems.refresh(true);
+lblMsg.setText("");
+oApp.back();

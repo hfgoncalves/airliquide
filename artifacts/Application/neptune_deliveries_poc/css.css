@@ -1,0 +1,14 @@
+.bigLabel {
+    font-size: 56px;
+    color: red;
+}
+
+.redcolor{
+    color: red;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+}

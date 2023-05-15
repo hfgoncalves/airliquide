@@ -1,0 +1,19 @@
+if (xhr.responseJSON.length > 0) {
+    // debugger;
+
+    var headerOpenEdition = xhr.responseJSON;
+
+    dataFromOpenEdition(headerOpenEdition, sap_LIKP);
+
+    var options = {
+        parameters: {
+            where: "", // Optional
+            select: "", // Optional
+            take: "", // Optional
+            skip: "", // Optional
+            order: "", // Optional
+        },
+    };
+
+    apiRestAPI_GetDetail(options);
+}

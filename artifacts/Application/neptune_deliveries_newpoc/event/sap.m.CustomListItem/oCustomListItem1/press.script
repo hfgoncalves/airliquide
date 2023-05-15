@@ -1,0 +1,121 @@
+var context = oEvent.oSource.getBindingContext();
+var data = context.getObject();
+modeloPageSESDetails.setData(data);
+modeloPageSESDetails.refresh(true);
+
+var delivery_materials = ModelData.Find(sap_LIPS, "VBELN", data.VBELN, "EQ");
+
+// console.log(delivery_materials);
+
+modeloListSESItems_SAP.setData(delivery_materials);
+modeloListSESItems_SAP.refresh(true);
+
+oApp.to(oPageSESDetails);
+
+setMsgs(objStatMsgDet, data.ENABLED);
+
+if (data.ENABLED === true) {
+    btnAdd.setEnabled(true);
+    btnDelDoc.setEnabled(true);
+} else {
+    btnAdd.setEnabled(false);
+    btnDelDoc.setEnabled(false);
+}
+
+if (data.STATUS === "Completed") {
+    btnSaveHeader.setEnabled(false);
+    tabSign.setVisible(true);
+    btnAdd.setEnabled(false);
+    btnDelDoc.setEnabled(false);
+} else {
+    btnSaveHeader.setEnabled(true);
+    tabSign.setVisible(false);
+}
+
+modeloListDocs.setData(); //Clear data
+modeloListDocs.refresh(true);
+
+if (modelmdlDocs.oData.length) {
+    var alldocs = JSON.parse(JSON.stringify(modelmdlDocs.oData));
+    // var doclist = alldocs.filter((doclist) => doclist.order === data.order);
+    var doclist = alldocs.filter((doclist) => doclist.order === data.VBELN);
+    modeloListDocs.setData(doclist);
+    modeloListDocs.refresh(true);
+    tabDocs.setText("Documents(" + doclist.length + ")");
+} else {
+    tabDocs.setText("Documents(0)");
+}
+
+// Add documents from cached API response
+var alldocsFromApi = JSON.parse(JSON.stringify(modelmdlDocsGetFromApi.oData));
+var doclistFromApi = alldocsFromApi.filter((doclistFromApi) => doclistFromApi.order === data.VBELN);
+
+if (doclistFromApi.length) {
+    //Find Existing Displayed Documents
+    var findoListDocs = ModelData.Find(oListDocs, "order", data.VBELN, "EQ");
+
+    var checkIfDocExists;
+
+    if (findoListDocs.length > 0) {
+        for (let a = 0; a < doclistFromApi.length; a++) {
+            checkIfDocExists = ModelData.Find(findoListDocs, "name", doclistFromApi[a].name, "EQ");
+            if (checkIfDocExists.length <= 0) {
+                ModelData.Add(oListDocs, doclistFromApi[a]);
+            }
+        }
+    } else {
+        for (let i = 0; i < doclistFromApi.length; i++) {
+            ModelData.Add(oListDocs, doclistFromApi[i]);
+        }
+    }
+
+    modeloListDocs.refresh(true);
+    tabDocs.setText("Documents(" + modeloListDocs.oData.length + ")");
+}
+
+// if (!AppCache.isOffline) {
+//     //If its Online
+//     if (data.STATUS === "Completed") {
+//         btnSaveHeader.setEnabled(false);
+//     } else {
+//         btnSaveHeader.setEnabled(true);
+//     }
+// } else {
+//     btnSaveHeader.setEnabled(false);
+// }
+
+// ------------------- ORIGINAL CODE -----------------------------------------------------
+
+// var singleorder = orderdetails.filter(singleorder => singleorder.order === data.order);
+
+// modeloListSESItems.setData(singleorder);
+// modeloListSESItems.refresh(true);
+
+// oApp.to(oPageSESDetails);
+// setMsgs(objStatMsgDet, singleorder[0].enabled);
+// if (singleorder[0].enabled) {
+//     btnAdd.setEnabled(true);
+//     btnDelDoc.setEnabled(true);
+// } else {
+//     btnAdd.setEnabled(false);
+//     btnDelDoc.setEnabled(false);
+// }
+
+// if (data.status === "Completed") {
+//     btnSaveHeader.setEnabled(false);
+//     tabSign.setVisible(true);
+//     btnAdd.setEnabled(false);
+//     btnDelDoc.setEnabled(false);
+// } else {
+//     btnSaveHeader.setEnabled(true);
+//     tabSign.setVisible(false);
+// }
+// if (modelmdlDocs.oData.length) {
+//     var alldocs = JSON.parse(JSON.stringify(modelmdlDocs.oData));
+//     var doclist = alldocs.filter(doclist => doclist.order === data.order);
+//     modeloListDocs.setData(doclist);
+//     modeloListDocs.refresh(true);
+//     tabDocs.setText("Documents(" + doclist.length + ")");
+// } else {
+//     tabDocs.setText("Documents(0)");
+// }
