@@ -3,4 +3,13 @@ var data = context.getObject();
 // debugger;
 var address = data.KNA1_STRAS+"+"+data.KNA1_PSTLZ+"+"+data.KNA1_ORT01;
 var maplink = getMapLink(address);
-window.open(maplink);
+
+// window.open(maplink);
+
+// DialogMap.open();
+
+// window.open(maplink, width='300px',height='300px');
+window.open( maplink, 'mapOpen' );
+
+this.href = "javascript:void(0)"; 
+// this.preventDefault();

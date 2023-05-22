@@ -21,6 +21,7 @@ sap.ui.getCore().attachInit(function(data) {
     }, 1000);
 });
 
+console.log('hello bug')
 
 document.addEventListener("deviceready", function() {
     pictureSource = navigator.camera.PictureSourceType;

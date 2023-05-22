@@ -36,6 +36,11 @@
 			"id": "bff2952e-57ee-ed11-9f73-000d3ab7b01b",
 			"name": "airliquidesaveddeliveries_detail",
 			"description": null
+		},
+		{
+			"id": "0744f933-88f4-ed11-907c-000d3ab7e967",
+			"name": "airliquidesaveddeliveries_header_coordinates",
+			"description": "Deliveries Latitude and Longitude coordinates"
 		}
 	],
 	"jsclass": [
@@ -77,7 +82,13 @@
 			"name": "TLairLiquidePOC"
 		}
 	],
-	"launchpad": [],
+	"launchpad": [
+		{
+			"id": "c86715ba-0df3-ed11-907c-000d3ab7e967",
+			"name": "LPAirLiquideAppWithMap",
+			"description": null
+		}
+	],
 	"certificates": [],
 	"role": [],
 	"systems": [],

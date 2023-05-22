@@ -1,4 +1,19 @@
 sap.ui.getCore().attachInit(function (data) {
+    sap.n.Phonegap.onOfflineCustom = function () {
+        oButtonRoute.setEnabled(false);
+       // oButton1routego2.setEnabled(false);
+    };
+
+    sap.n.Phonegap.onOnlineCustom = function () {
+        oButtonRoute.setEnabled(true);
+       // oButton1routego2.setEnabled(true);
+    };
+
+    if (AppCache.isOffline) {
+        oButtonRoute.setEnabled(false);
+   //     oButton1routego2.setEnabled(false);
+    }
+
     setTimeout(function () {
         // showMap();
         if (sap.n) {
@@ -22,16 +37,19 @@ sap.ui.getCore().attachInit(function (data) {
             });
         }
 
+        // console.log(3);
+        console.log(navigator);
+
         // INI ZEBRA DATAWEDGE -------------------------------------------------------------
         if (typeof datawedge !== "undefined") {
-             datawedge.start();
-        
-// Use MessageToast
-sap.m.MessageToast.show("datawedge active");             
-             datawedge.start("com.bluefletch.motorola.datawedge.ACTION");
-             datawedge.registerForBarcode(function (data) {
+            datawedge.start();
+
+            // Use MessageToast
+            sap.m.MessageToast.show("datawedge active");
+            datawedge.start("com.bluefletch.motorola.datawedge.ACTION");
+            datawedge.registerForBarcode(function (data) {
                 datawedgeRegister(data);
-             });
+            });
         }
 
         // document.addEventListener("deviceready", function () {
@@ -59,32 +77,33 @@ sap.m.MessageToast.show("datawedge active");
     btnListView.firePress();
 
     oApp.setBusy(true);
+    if (sap.n) {
+        if (!AppCache.isOffline) {
+            // Get SAP Data
+            var options = {
+                parameters: {
+                    "sap-client": "800", // Required
+                },
+            };
 
-    if (!AppCache.isOffline) {
-        // Get SAP Data
-        var options = {
-            parameters: {
-                "sap-client": "800", // Required
-            },
-        };
+            apiRestAPI_SAP(options);
 
-        apiRestAPI_SAP(options);
+            // //Get Header Documents
+            // var options = {
+            //     parameters: {
+            //         where: "", // Optional
+            //         select: "", // Optional
+            //         take: "", // Optional
+            //         skip: "", // Optional
+            //         order: "", // Optional
+            //     },
+            // };
 
-        // //Get Header Documents
-        // var options = {
-        //     parameters: {
-        //         where: "", // Optional
-        //         select: "", // Optional
-        //         take: "", // Optional
-        //         skip: "", // Optional
-        //         order: "", // Optional
-        //     },
-        // };
+            // apiRestAPI_GetDocs(options);
 
-        // apiRestAPI_GetDocs(options);
-
-        // //Get Stored Header / Detail in Open Edition
-        // getDataOpenEdition();
+            // //Get Stored Header / Detail in Open Edition
+            // getDataOpenEdition();
+        }
     }
 });
 

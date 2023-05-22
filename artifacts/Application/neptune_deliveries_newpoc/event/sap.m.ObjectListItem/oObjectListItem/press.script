@@ -2,13 +2,15 @@ var context = oEvent.oSource.getBindingContext();
 
 var data = context.getObject();
 
+var enabled = JSON.parse(data.ENABLED);
+
 modeloPageTimer.setData(data);
 modeloPageTimer.refresh();
 
 oApp.to(oPageTimer);
 
 // setMsgs(objStatMsgTimer, data.enabled);
-setMsgs(objStatMsgTimer, data.ENABLED);
+setMsgs(objStatMsgTimer, enabled);
 
 lblHH.setText("00");
 lblMM.setText("00");
@@ -19,7 +21,8 @@ btnSaveItem.setEnabled(false);
 btnStop.setEnabled(false);
 // btnStart.setEnabled(data.enabled);
 
-var isTrueSet = (data.ENABLED?.toLowerCase?.() === 'true');
+// var isTrueSet = (data.ENABLED?.toLowerCase?.() === 'true');
+var isTrueSet = enabled;
 btnStart.setEnabled(isTrueSet);
 
 initTimer(data);

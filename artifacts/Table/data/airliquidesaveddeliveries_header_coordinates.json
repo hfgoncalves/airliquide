@@ -1,0 +1,282 @@
+[
+	{
+		"id": "fd251240-7976-4ea2-a307-4a7fa48133bc",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017541",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "e94746e5-7b1f-4cb8-8f4d-f8f4b909fd17",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017550",
+		"LAT": "49.509410",
+		"LONG": "8.515900"
+	},
+	{
+		"id": "dfb16436-a6ca-4f55-9782-ae6a1a98862c",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017551",
+		"LAT": "50.872890",
+		"LONG": "6.946840"
+	},
+	{
+		"id": "df2901ce-8d2c-4c57-9406-90891c52e8bc",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017532",
+		"LAT": "48.210480",
+		"LONG": "11.634410"
+	},
+	{
+		"id": "c76901a2-e264-4265-be95-e907751e0d1e",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017555",
+		"LAT": "29.463320",
+		"LONG": "-98.465380"
+	},
+	{
+		"id": "c1ce3751-ef2a-41e9-a6ec-003d7f871880",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017531",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "c175aa61-7ee4-480b-9e57-2a5f7fc8ad53",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017543",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "c15fb80e-26f2-40a8-a5b5-361edbbcf458",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017538",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "bcc057f5-fa6d-42df-9456-45c4217e6e78",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017534",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "bc410207-f283-43e5-8837-2cb1cd89ba54",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017535",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "b7134fec-8629-4d17-953b-6a570ec3a5d8",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017542",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "ac3ef84b-dfde-43a9-82e8-94f1d6dfa96b",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017549",
+		"LAT": "48.210480",
+		"LONG": "11.634410"
+	},
+	{
+		"id": "a869cb3f-ed2f-4d3a-b51a-97c0806b817d",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017547",
+		"LAT": "48.210480",
+		"LONG": "11.634410"
+	},
+	{
+		"id": "a1a027eb-7cb6-4609-bd81-51ec4f5bcb7c",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017533",
+		"LAT": "48.210480",
+		"LONG": "11.634410"
+	},
+	{
+		"id": "91f73662-e8c0-447c-9c84-25f86ec60fcc",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017554",
+		"LAT": "50.872890",
+		"LONG": "6.946840"
+	},
+	{
+		"id": "8b19b69a-cceb-4ace-89f5-86e9bcff27e0",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017540",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "882e4bda-cd3c-4189-9925-22980da6b921",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017556",
+		"LAT": "50.872890",
+		"LONG": "6.946840"
+	},
+	{
+		"id": "8655a6f0-3656-44da-9bc6-867a25a3d3e2",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017536",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "85d1759a-9cee-42cd-8ba0-cd522df20b24",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017546",
+		"LAT": "48.210480",
+		"LONG": "11.634410"
+	},
+	{
+		"id": "7cec0ca8-d4b7-4134-9544-0081ce851974",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017530",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "7a300e6b-01a7-4688-83c4-bae60182101c",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017557",
+		"LAT": "50.113499",
+		"LONG": "8.675140"
+	},
+	{
+		"id": "75d21f99-5d6c-4121-906d-5ad2edb24439",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017552",
+		"LAT": "49.869380",
+		"LONG": "8.637210"
+	},
+	{
+		"id": "431a4694-ad5e-47b9-8a29-8fc8390d0ef9",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017548",
+		"LAT": "48.210480",
+		"LONG": "11.634410"
+	},
+	{
+		"id": "2161611d-9c62-427d-820b-54148037e0a3",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017539",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "136932fe-2337-4ef0-8b66-5ab8816f5a57",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017537",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "0f9ea4f4-bd54-4e84-821c-254b76d0aad7",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017544",
+		"LAT": "48.170350",
+		"LONG": "11.456120"
+	},
+	{
+		"id": "094e77a2-9ced-414b-9cbd-8cd0cf63f4dc",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017553",
+		"LAT": "49.869380",
+		"LONG": "8.637210"
+	},
+	{
+		"id": "05184992-ae9a-49a5-bdb8-c83d7fcecfe6",
+		"createdAt": "1684319749342",
+		"updatedAt": "1684319749342",
+		"createdBy": "admin",
+		"updatedBy": "admin",
+		"VBELN": "0080017545",
+		"LAT": "48.210480",
+		"LONG": "11.634410"
+	}
+]

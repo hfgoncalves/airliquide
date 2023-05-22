@@ -1,2 +1,14 @@
-var maplink = getMapLink(modeloPageSESDetails.oData.KNA1_STRAS+"+"+modeloPageSESDetails.oData.KNA1_PSTLZ+"+"+modeloPageSESDetails.oData.KNA1_ORT01);
-window.open(maplink);
+var maplink = getMapLink(
+    modeloPageSESDetails.oData.KNA1_STRAS +
+        "+" +
+        modeloPageSESDetails.oData.KNA1_PSTLZ +
+        "+" +
+        modeloPageSESDetails.oData.KNA1_ORT01
+);
+// window.open(maplink);
+
+// This will open a new browser tab with Google Maps
+window.open(maplink, "mapOpen");
+
+this.href = "javascript:void(0)";
+// this.preventDefault();

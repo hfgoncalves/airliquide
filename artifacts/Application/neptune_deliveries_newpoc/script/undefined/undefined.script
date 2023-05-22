@@ -12,3 +12,7 @@
   margin-right: auto;
   vertical-align: middle;
 }
+
+.noBorder {
+  border: none !important;
+}

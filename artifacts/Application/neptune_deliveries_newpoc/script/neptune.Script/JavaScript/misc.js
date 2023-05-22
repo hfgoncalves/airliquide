@@ -259,7 +259,8 @@ function getMapLink(address) {
     } else if (windowsPlatforms.indexOf(platform) !== -1) {
         os = "https://www.google.com/maps?q=" + address;
     } else if (/Android/.test(userAgent)) {
-        os = "geo:0,0?q=" + lat + "," + long;
+        // os = "geo:0,0?q=" + lat + "," + long;
+        os = "https://www.google.com/maps?q=" + address;
     } else if (!os && /Linux/.test(platform)) {
         os = "https://www.google.com/maps?q=" + address;
     }
@@ -869,7 +870,7 @@ function updateDeliveryDetail(updateDetail) {
 
 function datawedgeRegister(data) {
 
-    oSearchField.setValue(data);
+    oSearchField.setValue(data.barcode);
     oSearchField.fireLiveChange();
 
     datawedge.stopScanner();

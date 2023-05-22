@@ -1,0 +1,38 @@
+{
+	"id": "0744f933-88f4-ed11-907c-000d3ab7e967",
+	"createdAt": "2023-05-17T07:55:37.330Z",
+	"createdBy": "admin",
+	"fields": [
+		{
+			"id": "d48583bb-d0fd-43a8-a457-455f92947cb7",
+			"fieldName": "VBELN",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "6caa3b2a-b5e6-4e49-9ca8-f83a21e96d42",
+			"fieldName": "LAT",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		},
+		{
+			"id": "842b2516-f61c-4480-81ab-b03693d2ad07",
+			"fieldName": "LONG",
+			"fieldType": "text",
+			"isUnique": false,
+			"isNullable": true
+		}
+	],
+	"indices": [],
+	"foreignKeys": [],
+	"name": "airliquidesaveddeliveries_header_coordinates",
+	"description": "Deliveries Latitude and Longitude coordinates",
+	"ver": "23.5.17.955",
+	"enableAudit": true,
+	"includeDataInPackage": true,
+	"package": "cea414cd-24eb-ed11-9f73-000d3a67aef5",
+	"rolesRead": [],
+	"rolesWrite": []
+}
